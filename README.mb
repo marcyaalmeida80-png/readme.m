@@ -1,36 +1,110 @@
-# Projeto: Inclusão Digital em Fortaleza
+# Proposta do Sistema: MindCare
 
-## Proposta do Sistema
+## Descrição
 
-Este sistema tem como objetivo disponibilizar informações sobre a desigualdade no acesso à tecnologia e a alfabetização digital em Fortaleza. A plataforma busca reunir dados estatísticos, gráficos e conteúdos informativos de forma simples e acessível, permitindo que estudantes, pesquisadores e a população em geral compreendam melhor os desafios relacionados à inclusão digital na cidade.
+O MindCare é um sistema desenvolvido em Java para auxiliar usuários no registro e acompanhamento de seu estado emocional. O software permitirá cadastrar usuários, registrar emoções e atividades diárias, consultar históricos e gerar relatórios simples sobre o bem-estar do usuário.
 
-Além disso, o sistema pretende facilitar a consulta de informações relevantes sobre acesso à internet, uso de dispositivos tecnológicos e níveis de alfabetização digital, contribuindo para a conscientização social e para o desenvolvimento de iniciativas que promovam a inclusão digital.
+O sistema será desenvolvido utilizando Programação Orientada a Objetos (POO), aplicando os conceitos de encapsulamento, herança e polimorfismo. A aplicação possuirá interface gráfica e não utilizará banco de dados, armazenando as informações em memória através de ArrayLists.
 
 ## Requisitos Funcionais
 
-Os requisitos funcionais descrevem o que o sistema deve fazer.
+### RF01 – Cadastro de Usuários
 
-- RF01: Exibir informações sobre desigualdade no acesso à tecnologia em Fortaleza.
-- RF02: Apresentar dados estatísticos sobre alfabetização digital.
-- RF03: Permitir a navegação entre diferentes seções do site.
-- RF04: Exibir gráficos e indicadores relacionados ao tema.
-- RF05: Disponibilizar conteúdos educativos sobre inclusão digital.
-- RF06: Permitir a consulta de dados por categoria.
-- RF07: Exibir informações de forma organizada e intuitiva.
+Permitir cadastrar usuários informando nome, idade e e-mail.
+
+### RF02 – Registro de Emoções
+
+Permitir registrar o humor do usuário em determinada data.
+
+### RF03 – Registro de Atividades
+
+Permitir cadastrar atividades realizadas pelo usuário.
+
+### RF04 – Consulta de Histórico
+
+Permitir visualizar os registros realizados.
+
+### RF05 – Exclusão de Registros
+
+Permitir remover registros cadastrados.
+
+### RF06 – Geração de Relatórios
+
+Exibir estatísticas simples sobre os registros emocionais.
 
 ## Requisitos Não Funcionais
 
-Os requisitos não funcionais descrevem características de qualidade do sistema.
+### RNF01 – Interface Gráfica
 
-- RNF01: O sistema deve possuir interface responsiva para computadores e dispositivos móveis.
-- RNF02: As páginas devem carregar em até 3 segundos em condições normais de internet.
-- RNF03: O sistema deve ser desenvolvido utilizando HTML, CSS e JavaScript.
-- RNF04: O sistema deve apresentar informações de forma clara e acessível.
-- RNF05: O sistema deve funcionar nos principais navegadores modernos (Chrome, Firefox, Edge e Safari).
-- RNF06: O código deve ser organizado e documentado para facilitar a manutenção.
-- RNF07: O sistema deve garantir a disponibilidade das informações apresentadas.
-## Aplicação de Herança
+O sistema deverá utilizar Java Swing ou JavaFX.
 
-O sistema utiliza o conceito de herança da Programação Orientada a Objetos para promover o reaproveitamento de código e facilitar a manutenção. A classe `Conteudo` representa informações gerais exibidas no sistema, contendo atributos comuns como título e descrição.
+### RNF02 – Robustez
 
-A partir dela são criadas classes especializadas, como `Noticia` e `Estatistica`, que herdam suas características básicas e adicionam atributos específicos. Dessa forma, o projeto segue os princípios da orientação a objetos, tornando a estrutura mais organizada, escalável e de fácil manutenção.
+O sistema deverá tratar entradas inválidas sem encerrar a execução.
+
+### RNF03 – Tratamento de Exceções
+
+Utilizar blocos try-catch para tratamento de erros.
+
+### RNF04 – Sem Banco de Dados
+
+Os dados serão armazenados em ArrayLists durante a execução do programa.
+
+### RNF05 – Orientação a Objetos
+
+O projeto deverá utilizar encapsulamento, herança e polimorfismo.
+
+## Estrutura de Classes
+
+### Classe Pessoa
+
+* nome
+* idade
+
+### Classe Usuario (Herda Pessoa)
+
+* email
+* lista de registros emocionais
+
+### Classe Administrador (Herda Pessoa)
+
+* permissões administrativas
+
+### Classe RegistroEmocional
+
+* data
+* emoção
+* observação
+
+### Classe Relatorio
+
+* geração de estatísticas
+
+### Classe TelaPrincipal
+
+* interface gráfica do sistema
+
+## Conceitos de POO
+
+### Encapsulamento
+
+Todos os atributos serão privados, com getters e setters.
+
+### Herança
+
+A classe Usuario e Administrador herdarão da classe Pessoa.
+
+### Polimorfismo
+
+O método exibirInformacoes() será sobrescrito pelas classes filhas.
+
+## Tecnologias Utilizadas
+
+* Java
+* Java Swing ou JavaFX
+* ArrayList
+* Tratamento de Exceções
+
+## Resultado Esperado
+
+Disponibilizar um sistema gráfico funcional para acompanhamento emocional, demonstrando os principais conceitos da Programação Orientada a Objetos em Java.
